@@ -6,10 +6,10 @@ const path = require('path');
 const git = simpleGit();
 
 // Path to your local Git repository
-const repoPath = 'D:/Mahendra/PushPrivate';  // Updated with your actual repo path
+const repoPath = '';  // Updated with your actual repo path
 
 // GitHub repository URL and credentials
-const repoUrl = 'https://github.com/mahendraoo7/PushPrivate.git';
+const repoUrl = 'https://github.com/mahendraoo7/AUTO-GIT-COMMIT.git';
 const branch = 'main';  // Replace with your default branch name if it's different
 
 // Function to automate Git commit and push
@@ -31,6 +31,7 @@ async function automateGitCommit() {
 
     // Push changes to GitHub (ensure you're authenticated)
     await git.push(repoUrl, branch);  // Use your GitHub HTTPS URL
+    await git.push(repoUrl, branch);  // Use your GitHub HTTPS URL
 
     console.log(`Commit made and pushed on ${currentDate}`);
   } catch (error) {
@@ -39,7 +40,7 @@ async function automateGitCommit() {
 }
 
 // Schedule the task to run every day at midnight
-cron.schedule('30 17 * * *', () => {
+cron.schedule('49 17 * * *', () => {
   console.log('Running automated commit task...');
   automateGitCommit();
 });
