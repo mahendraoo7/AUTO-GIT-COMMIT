@@ -6,7 +6,7 @@ const path = require('path');
 const git = simpleGit();
 
 // Path to your local Git repository
-const repoPath = 'D:\Mahendra\React.Js_Mp';  // Updated with your actual repo path
+const repoPath = 'D:\\React.Js_Mp\\ReactJs\\01.Instalation\\app1.react\\src';  // Updated with your actual repo path
 
 // GitHub repository URL and credentials
 const repoUrl = 'https://github.com/mahendraoo7/React.Js_Mp.git';
@@ -40,7 +40,7 @@ async function automateGitCommit() {
 }
 
 // Schedule the task to run every day at midnight
-cron.schedule('0 18 * * *', () => {
-  console.log('Running automated commit task...');
+cron.schedule('56 9 * * *', () => {
+   console.log('Running automated commit task...');
   automateGitCommit();
 });
