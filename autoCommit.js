@@ -6,10 +6,10 @@ const path = require('path');
 const git = simpleGit();
 
 // Path to your local Git repository
-const repoPath = 'D:\\React.Js_Mp\\ReactJs\\01.Instalation\\app1.react\\src';  // Updated with your actual repo path
+const repoPath = 'D:\\JAVASCRIPT_RETURN\\Practice';  // Updated with your actual repo path
 
 // GitHub repository URL and credentials
-const repoUrl = 'https://github.com/mahendraoo7/React.Js_Mp.git';
+const repoUrl = 'https://github.com/mahendraoo7/JavaScript_Return.git';
 const branch = 'main';  // Replace with your default branch name if it's different
 
 // Function to automate Git commit and push
@@ -19,7 +19,8 @@ async function automateGitCommit() {
     git.cwd(repoPath);
 
     // Create or modify a file to simulate a code change
-    const filePath = path.join(repoPath, 'app.jsx');
+    const filePath = 'D:\\JAVASCRIPT_RETURN\\Practice\\paper.js';
+    // const filePath = path.join(repoPath, 'paper.js');
     const currentDate = new Date().toISOString();
     fs.appendFileSync(filePath, `Automated commit on ${currentDate}\n`);
 
@@ -40,7 +41,8 @@ async function automateGitCommit() {
 }
 
 // Schedule the task to run every day at midnight
-cron.schedule('56 9 * * *', () => {
-   console.log('Running automated commit task...');
+// cron.schedule('31 17 * * *', () => {
+//    console.log('Running automated commit task...');
+//   });
+  
   automateGitCommit();
-});
